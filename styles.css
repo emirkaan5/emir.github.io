@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("outrun-synthwave.gif");
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-position: center;
+    background-color: #072961; /* Placeholder background color */
+    overflow: hidden;
+}
+
+.container{
+    display:none;
+    color: #072961;
+    flex: 1;
+    padding: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 10px;
+   /* Placeholder background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 0px;
+}
+#researchText {
+    display: none;
+
+    position: relative;
+    
+}
+#education {
+    display: none;
+
+    position: relative;
+}
+#communityWork {
+    display: none;
+
+    position: relative;
+}
+
+.container p{
+    margin: 0;
+    padding : 0px;
+    text-align: left;
+    font-size: 30px;
+    color: #DFE6DA;
+}
+.container h1{
+    margin: 0;
+    padding : 0;
+    text-align: left;
+    color: #DFE6DA; 
+}
+
+.container ul{
+    font-size: 30px;
+    margin-left: 30px;
+    padding : 0;
+    text-align: left;
+    color: #DFE6DA; 
+}
+
+.container li{
+    margin: 0;
+    padding : 0;
+    text-align: left;
+    color: #DFE6DA; 
+}
+
+.info{
+    gap: 10px;
+    position: absolute;
+    left: 50px;
+    top: 82%;
+    transform: perspective(450px) rotateY(20deg); 
+}
+
+.info p{
+    display: block;
+    background-color: transparent;
+    border: none;
+    margin-left: 0px;
+    padding: 0px;
+    font-size: 40px;
+    text-align: left;
+    font: sans-serif;
+    color: #DFE6DA;
+    text-shadow: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    margin-top: 0;
+    margin-bottom: 0; 
+}
+.button-container {
+    gap: 10px;
+    position: absolute;
+    right: 50px;
+    top: 80%;
+    transform: perspective(450px) rotateY(-20deg);
+
+}
+
+.button-container p {
+    display: block;
+    background-color: transparent;
+    border: none;
+    margin-left: 0px;
+    padding: 0px;
+    font-size: 40px;
+    text-align: right;
+    font: sans-serif;
+    color: #DFE6DA;
+    text-shadow: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    animation: rotationReverse 0.5s backwards;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.button-container p:hover {
+    color:white;
+    animation: rotation 0.5s forwards;
+    cursor:pointer;
+    
+}
+
+/* .researchText{
+    margin-top: 50px;  Make the text invisible by default 
+    transition: all 0.5s;
+}
+#researchButton:hover .researchText {
+    animation: slideDown 0.5s forwards;
+} */
+
+@keyframes slide {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes rotation {
+    from { transform: rotateY(-20deg); font-size: 40px; }
+    to { transform:  rotateY(10deg); font-size:50px;}
+}
+
+@keyframes rotationReverse {
+    from { transform: rotateY(10deg); font-size: 50px; }
+    to { transform:  rotateY(-20deg); font-size:40px;}
+}
+
+@keyframes slideDown {
+    0% {
+        top: -150px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity:1;
+    }
+}

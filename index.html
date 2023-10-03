@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Text Slider</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>
+    
+        window.setTimeout(function(){
+                 // do whatever you want to do 
+                 $(document).ready(function(){
+            $(".button-container").hover(function(){
+                $(".container").stop(true,true).slideDown();
+            },function(){
+                $(".container").stop(true,true).slideUp(); 
+            });
+        });    
+                  }, 600);
+        $(document).ready(function() {
+            $("#researchButton").hover(function() {
+                $("#researchText").stop(true,true).slideDown();
+            },function() {
+                $("#researchText").stop(true, true).slideUp();
+            });
+        });
+        $(document).ready(function() {
+            $("#eduButton").hover(function() {
+                $("#education").stop(true,true).slideDown();
+            },function() {
+                $("#education").stop(true, true).slideUp();
+            });
+        });
+        $(document).ready(function() {
+            $("#community").hover(function() {
+                $("#communityWork").stop(true,true).slideDown();
+            },function() {
+                $("#communityWork").stop(true, true).slideUp();
+            });
+        });
+    </script>
+
+    <div class="container" id="box">
+        <!-- Main content goes here -->
+        <div id="researchText">
+            <p>
+                Highly motivated, goal-driven Computer Science undergraduate at the UMass Amherst, with expertise in data structures and programming, and a strong background in AI, machine learning, and statistical methods. Contributed to projects ranging from sustainable development goals to biomedical sensor optimization and is actively involved in AI research and software development.
+            </p>
+        </div>
+        <div id="education">
+            <h1>
+                UNIVERSITY OF MASSACHUSETTS-AMHERST, Amherst,Massachusetts,USA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Sept 2022-Present)
+            </h1>
+            <ul>
+                <li>
+                     Undergraduate, Major in Computer Science
+                </li>
+                <li>
+                     Got into Dean’s list in Fall 2022 term.
+                </li>
+                <li>
+                     Took CS187(Data structures with java), CS220(Programming Methodology with Typescript),
+CS250(Introduction to Computation) and Math235(Intro to linear Algebra), taking CS240(Reasoning under
+uncertainty)
+                </li>
+            </ul>
+            <h1>BAHCESEHIR HS FOR SCIENCE AND TECHNOLOGY, Izmir/ Turkey&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Sept 2018-Jun 2022)</h1>
+            <ul>
+                <li>
+                    Graduated with 4.0 GPA.
+                </li>
+            </ul>
+        </div>
+        <div id="communityWork">
+            <h1>Association for Supporting Contemporary Life, Izmir/ Turkey,</h1>
+            <p>Volunteer & Tutor; Worked as an instructor and taught elementary children about popular STEM topics and electronics. </p>
+            <ul>
+                <li>
+                    Made the topics accessible and related them to the children’s everyday lives.
+                </li>
+                <li>
+                    Practiced inquiry based activities that stimulated interest about the subjects.
+                </li>
+                <li>
+                    Allocated book donations on STEM topics to further interest in the subject.
+                </li>
+            </ul>
+        </div>
+       
+    </div>
+    <div class="scene">
+        <div class="info">
+            <p>Emir Kaan</p>
+            <p>Korukluoglu</p>
+        </div>
+        <div class="button-container">
+            <p id ="researchButton">About me</p>
+            <p id="eduButton">Education</p>
+            <p id="community">Community Work</p>
+            <p> Research Projects</p>
+            <!-- Add more text as needed -->
+        </div>
+    </div>
+    
+</body>
+</html>
