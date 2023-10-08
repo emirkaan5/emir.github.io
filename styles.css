@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url("outrun-synthwave.gif");
+    background-image: url("ezgif.com-gif-maker.gif");
     background-repeat:no-repeat ;
     background-size: cover;
     background-position: center;
@@ -14,18 +14,27 @@ body {
     overflow: hidden;
 }
 
-.container{
-    display:none;
-    color: #072961;
+
+
+.container {
+    display: none;
+    backdrop-filter: blur(8px);
+    color: #FF10F0;
     flex: 1;
-    padding: 100px;
-    margin-left: 200px;
-    margin-right: 200px;
+    padding: 5%;;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
     border-radius: 10px;
-   /* Placeholder background color */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
-    top: 0px;
+    justify-content: center;
+    align-items: flex-start;
+    place-content: center;
+    top: -10%;
+    /* Updated lines */
+    height: 50vh;  /* Adjust this value as needed */
+    overflow-y: auto;
 }
 #researchText {
     display: none;
@@ -43,23 +52,31 @@ body {
 
     position: relative;
 }
-
+#researchWork {
+    display: none;
+    position: relative;
+}
+#certs {
+    display: none;
+    position: relative;
+}
 .container p{
     margin: 0;
     padding : 0px;
     text-align: left;
-    font-size: 30px;
+    font-size: 2vw;
     color: #DFE6DA;
 }
 .container h1{
     margin: 0;
     padding : 0;
     text-align: left;
+    font-size: 3vw;
     color: #DFE6DA; 
 }
 
 .container ul{
-    font-size: 30px;
+    font-size: 2vw;
     margin-left: 30px;
     padding : 0;
     text-align: left;
@@ -70,25 +87,28 @@ body {
     margin: 0;
     padding : 0;
     text-align: left;
+    font-size: 2vw;
     color: #DFE6DA; 
 }
 
 .info{
-    gap: 10px;
     position: absolute;
-    left: 50px;
-    top: 82%;
-    transform: perspective(450px) rotateY(20deg); 
+    right: 4%;
+    top: 80%;
+    transform: perspective(450px) rotateY(-45deg);
+    place-content: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .info p{
     display: block;
     background-color: transparent;
     border: none;
-    margin-left: 0px;
+    margin-left: 5%;
     padding: 0px;
-    font-size: 40px;
-    text-align: left;
+    font-size: 3vw;
+    text-align: right;
     font: sans-serif;
     color: #DFE6DA;
     text-shadow: black;
@@ -98,22 +118,48 @@ body {
     margin-top: 0;
     margin-bottom: 0; 
 }
-.button-container {
-    gap: 10px;
-    position: absolute;
-    right: 50px;
-    top: 80%;
-    transform: perspective(450px) rotateY(-20deg);
+#linkedin-logo {
+    width: 3vw; /* adjust width relative to viewport width */
+    height: 3vw; /* adjust height relative to viewport width */
 
 }
 
-.button-container p {
-    display: block;
+#linkedDiv{
+    position: fixed; /* fixed positioning relative to the viewport */
+    bottom: 4vh; /* distance from the bottom of the viewport */
+    left: 51vw; /* centering relative to the viewport width */
+    transform: translateX(-50%); /* ensure it's perfectly centered */
+    transition: 0.3s; /* smooth hover effect */
+}
+#linkedDiv:hover {
+    opacity: 0.7; /* slight fade on hover for interaction feedback */
+}
+
+.button-container {
+    gap: 1%;
+    position: absolute;
+    left: 2vw;
+    top: 70%;
+
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensures it's behind other content */
+    background: transparent; /* Can adjust this if you want a visual effect */
+}
+
+.button-container button {
+    display: flex;
     background-color: transparent;
     border: none;
     margin-left: 0px;
     padding: 0px;
-    font-size: 40px;
+    font-size: 2vw;
     text-align: right;
     font: sans-serif;
     color: #DFE6DA;
@@ -121,18 +167,19 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-    animation: rotationReverse 0.5s backwards;
+    transition: transform 0.5s, font-size 0.5s, color 0.5s; /* Add this line */
     margin-top: 0;
     margin-bottom: 0;
 
 }
 
-.button-container p:hover {
-    color:white;
-    animation: rotation 0.5s forwards;
-    cursor:pointer;
-    
+.button-container button:hover {
+    color: white;
+    font-size: 2.2vw;
+    cursor: pointer;
 }
+
+
 
 /* .researchText{
     margin-top: 50px;  Make the text invisible by default 
@@ -149,14 +196,15 @@ body {
 }
 
 @keyframes rotation {
-    from { transform: rotateY(-20deg); font-size: 40px; }
-    to { transform:  rotateY(10deg); font-size:50px;}
+    from { transform: rotateY(-20deg) translateZ(0); font-size: 3vw; }
+    to { transform: perspective(300px) rotateY(-10deg) translateZ(20px); font-size:4vw;}
 }
 
 @keyframes rotationReverse {
-    from { transform: rotateY(10deg); font-size: 50px; }
-    to { transform:  rotateY(-20deg); font-size:40px;}
+    from { transform: rotateY(-10deg) translateZ(20px); font-size: 4vw; }
+    to { transform: rotateY(-20deg) translateZ(0); font-size:3vw;}
 }
+
 
 @keyframes slideDown {
     0% {
