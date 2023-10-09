@@ -93,9 +93,9 @@ body {
 
 .info{
     position: absolute;
-    right: 4%;
+    right: 1.5vw;
     top: 80%;
-    transform: perspective(450px) rotateY(-45deg);
+    transition: transform 0.5s, font-size 0.5s, color 0.5s;
     place-content: center;
     justify-content: center;
     text-align: center;
@@ -139,7 +139,7 @@ body {
     gap: 1%;
     position: absolute;
     left: 2vw;
-    top: 70%;
+    top: 75%;
 
 }
 
