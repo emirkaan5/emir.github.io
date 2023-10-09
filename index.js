@@ -43,5 +43,6 @@ $(document).ready(function() {
             $('.container').stop(true, true).slideUp();
         }
     });
+    
     });
     
